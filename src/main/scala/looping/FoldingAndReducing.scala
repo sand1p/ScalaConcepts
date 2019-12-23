@@ -1,12 +1,35 @@
 package looping
 
-object FoldingAndReducing extends App {
+object FoldingAndReducing extends App{
 
 //  val list: Array[Int] = Array(1, 2, 3, 4, 45, 67)
 
   val list: Array[Int] = Array(3, 4, 3, 0,2,2,3,0,0)
 //  val list: Array[Int] = Array(4,2,0)
 //  val list: Array[Int] = Array(4,4,3,3,1,0)
+
+
+
+  def min(array: Array[Int]):Int = {
+   var ans = 1000
+    for {
+      i <- 0 until array.length
+    } yield {
+      if(ans > array(i)){
+        ans = array(i)
+      }
+    }
+    ans
+  }
+
+  // test case 1 :
+//  val input  = Array(-9,1,2,3,-3,-7)
+  // test case 2
+//  val input  = Array(9,1,2,3)
+//  test case 3
+  val input  = Array(-9,1,2,3,-3,-7)
+
+  println(min(input))
 
 
   def folding():Int = {
@@ -26,6 +49,7 @@ object FoldingAndReducing extends App {
     counter
   }
 
-  println(folding())
+//  println(folding())
+
 
 }
