@@ -36,8 +36,19 @@ object ImplicitClass {
 
   // Implicit conversion
 
-  implicit def asRichString(str: String): RichString = new RichString(str)
-  "piyush" snakeCase
+  def asRichString(str: String): RichString = new RichString(str)
+
+  asRichString("piyush").snakeCase
+
+
+
+  /*
+  val richString = new RichString("piyush")
+  richString.snakeCase
+
+  val richString2 = new RichString ("Suyog")
+  richString.snakeCase
+  */
 
     // Type class
 }

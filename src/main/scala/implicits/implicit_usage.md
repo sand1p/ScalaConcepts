@@ -2,7 +2,7 @@
 * To Pass Execution Context
 * 
 
-##Restrictions on implicit classes 
+## Restrictions on implicit classes 
 
 * they should must be defined inside other trait/class/object
 * Accepts Only one non implicit argument in the constructor  
